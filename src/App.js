@@ -23,7 +23,7 @@ function App() {
    
   },[location])
   const handleChange=async ()=>{
-    const response =await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${document.getElementById("city").value}&limit=5&appid=${process.env.REACT_APP_API_KEY}`)
+    const response =await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${document.getElementById("city").value}&limit=5&appid=${process.env.REACT_APP_API_KEY}`)
     setLocation({
       lat:response.data[0].lat,
       lon:response.data[0].lon
